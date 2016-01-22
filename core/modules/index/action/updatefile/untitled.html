@@ -1,0 +1,20 @@
+<?php
+
+
+if(isset($_GET["tkn"]) && $_GET["tkn"]==$_SESSION["tkn"]){
+	$file = FileData::getById($_GET["id"]);
+
+	$url = "storage/data/".$_SESSION["user_id"]."/";
+	$filename = $file->filename;
+
+	if(!$file->is_folder)
+		unlink($url.$filename);
+
+	$file->del();
+	Core::alert("Eliminado exitosamente!");
+}else{
+	Core::alert("Permiso Denegado!");
+}
+Core::redir("./?view=home");
+
+?>
