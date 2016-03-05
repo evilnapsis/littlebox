@@ -1,12 +1,15 @@
-# LittleBox
-LittleBox es un sistema para compartir archivos desarrollado con PHP y MySQL, en el sistema podrás subir archivos públicos o privados, crear carpetas para organizarlos, podrás gestionar permisos a usuarios y mucho mas, LittleBox esta inspirado en Dropbox y Google Drive.
+# Inventio Lite
+Inventio Lite es un sistema de Inventario y Ventas de proposito general desarrollado con PHP y MySQL.
 
 ## Modulos
-- Archivos
-- Permisos
-- Comentarios
+- Productos
+- Categorias
+- Caja
+- Clientes
+- Proveedores
+- Inventario
 - Usuarios
 
 ## Mas informacion
 Encuentra mas informacion, instrucciones y demos en el siguiente link.
-Link:  http://evilnapsis.com/2016/01/22/littlebox-sistema-para-compartir-archivos-hecho-con-php-y-mysql
+Link: http://evilnapsis.com/2015/07/11/inventio-lite-sistema-de-inventario-y-ventas/
