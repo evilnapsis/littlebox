@@ -115,7 +115,11 @@ $files = FileData::getRootByUserId($_SESSION["user_id"]);
 	<?php echo $file->filename; ?></a>
 	</td>
 	<td><?php echo $file->description; ?></td>
-	<td><?php $fsize = filesize("storage/data/".$file->user_id."/".$file->filename);
+	<td><?php 
+	$url = "storage/data/".$file->user_id."/".$file->filename;
+	if(file_exists($url)){
+	$fsize = filesize($url);
+	if($file->filename!=""){
 	if(!$file->is_folder){
 	if($fsize>1000*1000*1000){
 		echo ($fsize/1000*1000*1000)."Gb";
@@ -128,6 +132,8 @@ $files = FileData::getRootByUserId($_SESSION["user_id"]);
 	}
 	else if($fsize>0){
 		echo $fsize."B";
+	}
+	}
 	}
 	}
 	 ?></td>
