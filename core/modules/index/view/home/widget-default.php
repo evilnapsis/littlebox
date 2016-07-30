@@ -1,4 +1,8 @@
 <?php 
+
+
+if(!isset($_SESSION["user_id"])){ Core::redir("./");}
+
 $alphabeth ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYZ1234567890_-";
 $token = "";
 for($i=0;$i<6;$i++){
